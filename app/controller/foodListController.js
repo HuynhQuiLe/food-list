@@ -12,6 +12,7 @@ export const getAllFoodList = async () => {
     if (allFood?.length) {
       localStorage.setItem("foodArray", JSON.stringify(allFood));
       renderList(allFood);
+      document.querySelector("#selLoai").value = "all";
     }
   } catch (error) {
     console.log(error);
